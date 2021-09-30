@@ -15,13 +15,11 @@ public class Main {
             data[i]++;
             
         }
-        HashMap<Integer,Integer> histogram = new HashMap<>();
-        for (int key : data) {
-            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
-        }
         
-        for (Integer integer : histogram.keySet()) {
-            System.out.println( integer +" ==> " + histogram.get(integer));
+        Histogram histo = new Histogram(data);
+        Map<Integer,Integer> histgr = histo.getHistogram();
+        for (Integer integer : histgr.keySet()) {
+            System.out.println( integer +" ==> " + histgr.get(integer));
             
         }
     }
