@@ -20,7 +20,7 @@ public class Main {
         Map<Integer,Integer> histgr = histo.getHistogram();
         for (Integer integer : histgr.keySet()) {
             System.out.println( integer +" ==> " + histgr.get(integer));
-            
+             
         }
     }
     
