@@ -6,19 +6,14 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-     Integer[] data = new Integer[15];
-        for (int i = 0; i < data.length; i++) {
-            data[i] = (int)(Math.random()*10);
-        }
-        for (int i = 0; i < 15; i=i+2) {
-            data[i]++;
-            
-        }
+     String[] data = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
+        
+       
         
         Histogram histo = new Histogram(data);
-        Map<Integer,Integer> histgr = histo.getHistogram();
-        for (Integer integer : histgr.keySet()) {
-            System.out.println( integer +" ==> " + histgr.get(integer));
+        Map<String,Integer> histgr = histo.getHistogram();
+        for (String key : histgr.keySet()) {
+            System.out.println( key +" ==> " + histgr.get(key));
             
         }
     }
